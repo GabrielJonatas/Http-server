@@ -1,11 +1,12 @@
-require('dotenv').config();
+//require('dotenv').config();
 const http = require('http');
-const PORT = process.env.PORT;
-const HOST = process.env.HOST
+const PORT = 8000;
+const HOST = 'localhost';
 
 const requestListener = (req,res) => {
+  res.setHeader("Content-Type", "application/json");
   res.writeHead(200);
-  res.end('Hello world!\n');
+  res.end(`{"message": "This is a JSON response"}`);
 };
 
 const server = http.createServer(requestListener);

@@ -1,0 +1,9 @@
+{
+  "events": {
+    "start": "cls",
+    "restart": "cls"
+  },
+  "watch": ["src"],
+  "ext": "js,json,ts", 
+  "exec": "node ./src/server.js"
+}
